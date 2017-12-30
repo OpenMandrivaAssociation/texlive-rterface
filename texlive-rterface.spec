@@ -5,8 +5,8 @@
 # catalog-license lppl1.2
 # catalog-version undef
 Name:		texlive-rterface
-Version:	20130423
-Release:	9
+Version:	20170414
+Release:	1
 Summary:	Access to R analysis from within a document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/rterface
