@@ -5,7 +5,7 @@
 # catalog-license lppl1.2
 # catalog-version undef
 Name:		texlive-rterface
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Access to R analysis from within a document
 Group:		Publishing
