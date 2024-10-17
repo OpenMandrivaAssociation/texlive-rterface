@@ -3,7 +3,7 @@ Version:	30084
 Release:	2
 Summary:	Access to R analysis from within a document
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/rterface
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/rterface
 License:	LPPL1.2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rterface.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rterface.doc.r%{version}.tar.xz
