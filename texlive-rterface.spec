@@ -1,43 +1,20 @@
-Name:		texlive-rterface
-Version:	30084
-Release:	2
+%global tl_name rterface
+%global tl_revision 30084
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
 Summary:	Access to R analysis from within a document
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/rterface
-License:	LPPL1.2
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rterface.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rterface.doc.r%{version}.tar.xz
+License:	lppl1.2
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/rterface.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/rterface.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package mediates interaction between LaTeX and R; it allows
-LaTeX to set R's parameters, and provides code to read R
-output.
+The package mediates interaction between LaTeX and R; it allows LaTeX to
+set R's parameters, and provides code to read R output.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/rterface/rterface.sty
-%doc %{_texmfdistdir}/doc/latex/rterface/README
-%doc %{_texmfdistdir}/doc/latex/rterface/rterface.pdf
-%doc %{_texmfdistdir}/doc/latex/rterface/rterface.tex
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc %{buildroot}%{_texmfdistdir}
